@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d66bf084-cd78-4014-b869-c49fd4c5825d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     guru.`NIP` AS NIP,
+     guru.`Nama` AS Nama,
+     guru.`Alamat` AS Alamat,
+     guru.`Telepon` AS Telepon
+FROM
+     `guru` guru]]>
+	</queryString>
+	<field name="NIP" class="java.lang.String"/>
+	<field name="Nama" class="java.lang.String"/>
+	<field name="Alamat" class="java.lang.String"/>
+	<field name="Telepon" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="24" width="444" height="37" uuid="bd492065-db0e-4a11-b53b-d2c47d702b45"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMK NEGERI XXX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="61" width="444" height="20" uuid="5c101f41-a521-44da-99e3-64c556f21559"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Jl. Cinta Jalan no. 99 Sleman - Yogyakarta Telp / Fax 0332 - 423420]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="111" height="110" uuid="77d4b82f-565f-4caf-b8b3-14ef858fe967"/>
+				<imageExpression><![CDATA["D:\\BACKUP DOWNLOAD\\Compressed\\SIA\\UPK\\UKK\\src\\image\\smk.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="555" height="20" uuid="cf8bc4e8-0b6b-4dbe-acf9-919208af8b5b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR GURU]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="36af3d33-4885-4c98-9c53-b05f16ae4f13"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="2" width="100" height="20" uuid="379e73bb-c09b-4bbb-a175-3e17707697b3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="2" width="100" height="20" uuid="70b746cb-c567-493c-b405-ba9561a6dc97"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="2" width="100" height="20" uuid="6724ec61-e786-4418-bc73-9c8e7991730d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="2" width="100" height="20" uuid="1e510a68-9116-477f-8e34-f9e83f2b88af"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Telepon]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="149" y="0" width="100" height="20" uuid="a8b38014-6089-41c6-8738-c8d763826eee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="13" y="0" width="100" height="20" uuid="ee7eb255-78dd-493e-a725-2db00cc1a74f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NIP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="100" height="20" uuid="aca7b6b8-b4c0-4009-b64b-ef1195b7a82e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="0" width="100" height="20" uuid="cd569ded-ec2b-4cca-a8f5-42f8f99d8615"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Telepon}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef159e06-255c-47d6-a4fa-fd6bffe9a851">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="49d4b49c-bf57-4438-b97f-003e1e771b75"/>
+	<subDataset name="Table Dataset 2" uuid="ac494321-e53d-4e4a-b15d-366ec5500d29"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     rapot.`NIS` AS rapot_NIS,
+     rapot.`Nama` AS rapot_Nama,
+     rapot.`BIN_Angka` AS rapot_BIN_Angka,
+     rapot.`BIN_Huruf` AS rapot_BIN_Huruf,
+     rapot.`MAT_Angka` AS rapot_MAT_Angka,
+     rapot.`Mat_Huruf` AS rapot_Mat_Huruf,
+     rapot.`BIG_Angka` AS rapot_BIG_Angka,
+     rapot.`BIG_Huruf` AS rapot_BIG_Huruf
+FROM
+     `rapot` rapot]]>
+	</queryString>
+	<field name="rapot_NIS" class="java.lang.String"/>
+	<field name="rapot_Nama" class="java.lang.String"/>
+	<field name="rapot_BIN_Angka" class="java.lang.Integer"/>
+	<field name="rapot_BIN_Huruf" class="java.lang.String"/>
+	<field name="rapot_MAT_Angka" class="java.lang.Integer"/>
+	<field name="rapot_Mat_Huruf" class="java.lang.String"/>
+	<field name="rapot_BIG_Angka" class="java.lang.Integer"/>
+	<field name="rapot_BIG_Huruf" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="104" y="60" width="444" height="20" uuid="1d747cd0-9002-4f3e-99b8-b2d41457acb9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Jl. Cinta Jalan no. 99 Sleman - Yogyakarta Telp / Fax 0332 - 423420]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="23" width="444" height="37" uuid="ec69956f-654e-4122-8f5e-499dbbbfa257"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMK NEGERI XXX]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="108" uuid="bcc93b27-d5c0-4e5f-be70-d05383f800ec"/>
+				<imageExpression><![CDATA["D:\\BACKUP DOWNLOAD\\Compressed\\SIA\\UPK\\UKK\\src\\image\\smk.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="555" height="20" uuid="ce1a29bd-f124-412f-ad67-91e6142c48bd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA NILAI]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="555" height="1" uuid="cd2d9eea-624c-4201-a696-e0d85b3e4ebf"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="100" height="20" uuid="876f9ced-8b47-43f3-8e55-42ebd87dc625"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NIS            :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="100" height="20" uuid="36f4e0ac-0355-4570-a4a0-c07cd6aad7c7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NAMA      :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="2" width="100" height="20" uuid="67a34612-0f1c-401f-b6da-9ab94bdb7ce6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_NIS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="22" width="100" height="20" uuid="6327ca9a-c003-4023-8507-01c4b26233f0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_Nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="359" splitType="Stretch">
+			<textField>
+				<reportElement x="233" y="77" width="100" height="20" uuid="539c2fc2-59fa-4f76-9e9a-3356ab77a34c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_BIN_Angka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="77" width="100" height="20" uuid="66d3164b-18c3-4c73-8ecb-7d41c64cdc34"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_BIN_Huruf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="122" width="100" height="20" uuid="8005494f-d190-4a92-b6d5-4a6f708ddac5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_MAT_Angka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="122" width="100" height="20" uuid="2b7cf157-e105-4a01-bf42-178c2984849d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_Mat_Huruf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="162" width="100" height="20" uuid="0481779c-c8be-4472-8307-1c660d0ba390"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_BIG_Angka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="162" width="100" height="20" uuid="0cc2db99-4f8c-4e8c-b7c9-c6df676c8c10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rapot_BIG_Huruf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="56" y="77" width="134" height="20" uuid="39794663-1c9c-47f4-8160-be5f272a993e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[BAHASA INDONESIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="41" width="100" height="20" uuid="16a95ffd-ec10-4d3f-b654-6034523a7210"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NILAI ANGKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="41" width="100" height="20" uuid="d6b2bc4d-e410-4012-b9a0-a045de25c656"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NILAI HURUF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="122" width="134" height="20" uuid="ea900292-60a0-4139-bf5f-98e22243e21f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[MATEMATIKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="162" width="134" height="20" uuid="1992ed82-22c5-4b01-9d00-feb17784abe0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[BAHASA INGGRIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="41" width="134" height="20" uuid="10761f39-da4a-4164-bafd-77deed0cfb77"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATA PELAJARAN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="45" y="69" width="449" height="1" uuid="98690078-9948-4a85-8b69-20ef1b054df7"/>
+			</line>
+			<line>
+				<reportElement x="45" y="107" width="449" height="1" uuid="54783fe1-0464-4013-b761-376830c438e8"/>
+			</line>
+			<line>
+				<reportElement x="45" y="151" width="449" height="1" uuid="4422f364-bc7b-4a7b-8380-e1ab4bac0195"/>
+			</line>
+			<line>
+				<reportElement x="45" y="186" width="449" height="1" uuid="ce67cecc-9987-473e-a443-c74e2cf57a3b"/>
+			</line>
+			<line>
+				<reportElement x="45" y="33" width="449" height="1" uuid="24f63447-29d2-44f3-8922-ab65e800e6e6"/>
+			</line>
+			<line>
+				<reportElement x="45" y="33" width="1" height="154" uuid="b7d6293b-46f1-4422-9203-baca59167025"/>
+			</line>
+			<line>
+				<reportElement x="203" y="33" width="1" height="154" uuid="db8e7aea-6202-4a6e-9733-d036ee91bde4"/>
+			</line>
+			<line>
+				<reportElement x="357" y="34" width="1" height="154" uuid="f8488b76-c1ab-41c7-9536-74601d8f1102"/>
+			</line>
+			<line>
+				<reportElement x="493" y="33" width="1" height="154" uuid="ec5a075c-e6a9-43e8-9d3b-762223838a6b"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

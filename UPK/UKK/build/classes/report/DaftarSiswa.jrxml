@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="379c74f3-b744-403d-8e4f-1626bd94554e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     siswa.`NIS` AS siswa_NIS,
+     siswa.`Nama` AS siswa_Nama,
+     siswa.`Alamat` AS siswa_Alamat,
+     siswa.`TanggalLahir` AS siswa_TanggalLahir,
+     siswa.`FotoSiswa` AS siswa_FotoSiswa
+FROM
+     `siswa` siswa]]>
+	</queryString>
+	<field name="siswa_NIS" class="java.lang.String"/>
+	<field name="siswa_Nama" class="java.lang.String"/>
+	<field name="siswa_Alamat" class="java.lang.String"/>
+	<field name="siswa_TanggalLahir" class="java.sql.Date"/>
+	<field name="siswa_FotoSiswa" class="java.io.InputStream"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="26" width="444" height="37" uuid="90ecc260-c169-42d3-90d1-1e8115135d28"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMK NEGERI XXX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="63" width="444" height="20" uuid="265f788e-9e75-4cce-8241-cf4968513284"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Jl. Cinta Jalan no. 99 Sleman - Yogyakarta Telp / Fax 0332 - 423420]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="98" uuid="b19c95a3-6de4-42fc-9226-cd46920abb5e"/>
+				<imageExpression><![CDATA["D:\\BACKUP DOWNLOAD\\Compressed\\SIA\\UPK\\UKK\\src\\image\\smk.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="6b1fb837-b84e-4b2f-a200-29a3d4151796"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR NAMA SISWA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="31" y="2" width="24" height="20" uuid="c36cbcc3-c445-4faf-b691-5777c3a3a093"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="2" width="45" height="20" uuid="60b9149b-e015-4fde-9563-f8a636c407d6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="2" width="60" height="20" uuid="2bb469ff-72f2-4f3b-96b4-907fa76a95ad"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="2" width="100" height="20" uuid="dba8e628-0ba2-4b48-854d-ff197c371bdb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[TANGGAL LAHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="2" width="76" height="20" uuid="ff97cfd0-e7a3-4638-8c49-9e46b537c712"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[FOTO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="007723c3-5dde-43be-bf8d-1bff593fcc42"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_NIS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="0" width="100" height="20" uuid="d5545199-bfc6-4cd1-abd2-9e5f6d85f5a5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_Nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="100" height="20" uuid="d81babfb-efe1-4051-bd62-f737f0b5f8ce"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_Alamat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="306" y="2" width="100" height="20" uuid="ea1c3968-8b91-4979-b946-c4a2cbc9022f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_TanggalLahir}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="456" y="2" width="59" height="66" uuid="a86329b9-7e6d-41c5-8054-b44af0b7b685"/>
+				<imageExpression><![CDATA[$F{siswa_FotoSiswa}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="-54" width="555" height="1" uuid="df9807d9-7f40-42dd-b165-fae76bae5617"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
